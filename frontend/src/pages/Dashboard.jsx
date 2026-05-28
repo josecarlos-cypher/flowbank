@@ -34,13 +34,19 @@ function Dashboard() {
   const chaveCartoes =
     `cartoes_${usuario?.email}`;
 
-  const [transacoes, setTransacoes] = useState([]);
+  const [transacoes, setTransacoes] = useState(() => {
+    const dados = localStorage.getItem(chaveTransacoes);
+    return dados ? JSON.parse(dados) : [];
+  });
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
   const [abrirModal, setAbrirModal] = useState(false);
   const [aba, setAba] = useState("inicio");
 
-  const [cartoes, setCartoes] = useState([]);
+  const [cartoes, setCartoes] = useState(() => {
+    const dadosCartoes = localStorage.getItem(chaveCartoes);
+    return dadosCartoes ? JSON.parse(dadosCartoes) : [];
+  });
   const [numeroCartao, setNumeroCartao] = useState("");
   const [nomeCartao, setNomeCartao] = useState("");
   const [vencimento, setVencimento] = useState("");
@@ -50,27 +56,6 @@ function Dashboard() {
   const [usd, setUsd] = useState("");
   const [eur, setEur] = useState("");
   const [btc, setBtc] = useState("");
-
-  // CARREGAR DADOS
-  useEffect(() => {
-    const dados =
-      localStorage.getItem(chaveTransacoes);
-
-    if (dados) {
-      setTransacoes(
-        JSON.parse(dados)
-      );
-    }
-
-    const dadosCartoes =
-      localStorage.getItem(chaveCartoes);
-
-    if (dadosCartoes) {
-      setCartoes(
-        JSON.parse(dadosCartoes)
-      );
-    }
-  }, [chaveTransacoes, chaveCartoes]);
 
   // SALVAR TRANSAÇÕES
   useEffect(() => {
