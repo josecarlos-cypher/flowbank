@@ -57,7 +57,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-[#020617] flex items-center justify-center p-6">
-      <div className="w-full max-w-6xl grid lg:grid-cols-2 overflow-hidden rounded-[40px] border border-slate-800 bg-slate-900 shadow-2xl">
+      <div className="w-full max-w-6xl grid lg:grid-cols-2 overflow-y-auto rounded-[40px] border border-slate-800 bg-slate-900 shadow-2xl">
         {/* ESQUERDA */}
         <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-14 text-white">
           <div>

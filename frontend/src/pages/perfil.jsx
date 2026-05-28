@@ -2,10 +2,13 @@ import Menu from "../components/Menu";
 
 function Perfil() {
 
-  const usuario =
-    JSON.parse(
-      localStorage.getItem("usuario")
-    );
+  const usuario = JSON.parse(
+    localStorage.getItem("usuario")
+  );
+
+  if (!usuario) {
+    navigate("/");
+  }
 
   return (
 
