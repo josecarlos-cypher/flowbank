@@ -1,7 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import api from "../services/api";
 
 function Cadastro() {
   const navigate = useNavigate();
