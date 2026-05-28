@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
+// import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
@@ -10,43 +10,43 @@ export default defineConfig({
 
     tailwindcss(),
 
-    VitePWA({
-      registerType: 'autoUpdate',
+    // VitePWA({
+    //   registerType: 'autoUpdate',
 
-      manifest: {
+    //   manifest: {
 
-        name: 'FlowBank',
+    //     name: 'FlowBank',
 
-        short_name: 'FlowBank',
+    //     short_name: 'FlowBank',
 
-        description:
-          'Banco digital inteligente',
+    //     description:
+    //       'Banco digital inteligente',
 
-        theme_color: '#0f172a',
+    //     theme_color: '#0f172a',
 
-        background_color: '#0f172a',
+    //     background_color: '#0f172a',
 
-        display: 'standalone',
+    //     display: 'standalone',
 
-        start_url: '/',
+    //     start_url: '/',
 
-        scope: '/',
+    //     scope: '/',
 
-        icons: [
-          {
-            src: '/logo.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
+    //     icons: [
+    //       {
+    //         src: '/logo.png',
+    //         sizes: '192x192',
+    //         type: 'image/png'
+    //       },
 
-          {
-            src: '/logo.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
+    //       {
+    //         src: '/logo.png',
+    //         sizes: '512x512',
+    //         type: 'image/png'
+    //       }
+    //     ]
+    //   }
+    // })
 
   ]
 })
