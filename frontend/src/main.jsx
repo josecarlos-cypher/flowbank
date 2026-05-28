@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Perfil from "./pages/Perfil";
 import Onboarding from "./pages/Onboarding";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
@@ -34,6 +34,11 @@ ReactDOM.createRoot(
         <Route
           path="/dashboard"
           element={<Dashboard />}
+        />
+
+        <Route
+          path="/perfil"
+          element={<Perfil />}
         />
 
       </Routes>

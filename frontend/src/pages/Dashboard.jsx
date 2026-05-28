@@ -24,7 +24,7 @@ function Dashboard() {
   );
 
   if (!usuario) {
-    navigate("/");
+    navigate("/login");
   }
 
   // CHAVES INDIVIDUAIS POR USUÁRIO
@@ -70,7 +70,7 @@ function Dashboard() {
         JSON.parse(dadosCartoes)
       );
     }
-  }, []);
+  }, [chaveTransacoes, chaveCartoes]);
 
   // SALVAR TRANSAÇÕES
   useEffect(() => {
@@ -78,7 +78,7 @@ function Dashboard() {
       chaveTransacoes,
       JSON.stringify(transacoes)
     );
-  }, [transacoes]);
+  }, [transacoes, chaveTransacoes]);
 
   // SALVAR CARTÕES
   useEffect(() => {
@@ -86,7 +86,7 @@ function Dashboard() {
       chaveCartoes,
       JSON.stringify(cartoes)
     );
-  }, [cartoes]);
+  }, [cartoes, chaveCartoes]);
 
   // BUSCAR COTAÇÕES
   useEffect(() => {
@@ -328,7 +328,7 @@ function Dashboard() {
       );
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white flex flex-col lg:flex-row">
+    <div className="min-h-[100dvh] overflow-y-auto bg-[#020617] text-white flex flex-col lg:flex-row">
 
       {/* SIDEBAR */}
 
@@ -1003,7 +1003,7 @@ function Dashboard() {
       </main>
 
       {abrirModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-6">
+        <div className="fixed inset-0 overflow-y-auto bg-black/60 flex items-center justify-center z-50 p-6">
           <div className="w-full max-w-lg bg-slate-900 rounded-[32px] p-8">
             <div className="flex justify-between mb-8">
               <h3 className="text-3xl font-bold">

@@ -1,7 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import api from "../services/api";
 
 function Login() {
   const navigate = useNavigate();
@@ -12,47 +11,36 @@ function Login() {
   const [senha, setSenha] =
     useState("");
 
-  async function entrar() {
+  function entrar() {
     if (!email || !senha) {
       alert("Preencha todos os campos");
       return;
     }
 
-    try {
-      const response =
-        await api.post(
-          "/auth/login",
-          {
-            email,
-            senha,
-          }
-        );
+    const usuario = JSON.parse(
+      localStorage.getItem("usuario")
+    );
 
-      /*
-        SALVAR USUÁRIO
-      */
-      localStorage.setItem(
-        "usuario",
-        JSON.stringify(
-          response.data.usuario
-        )
-      );
-
-      /*
-        SALVAR TOKEN
-      */
-      localStorage.setItem(
-        "token",
-        response.data.token
-      );
-
-      navigate("/dashboard");
-    } catch (err) {
-      alert(
-        err.response?.data?.msg ||
-          "Erro ao entrar"
-      );
+    if (!usuario) {
+      alert("Conta não encontrada. Crie sua conta primeiro.");
+      navigate("/cadastro");
+      return;
     }
+
+    if (
+      usuario.email !== email ||
+      usuario.senha !== senha
+    ) {
+      alert("Email ou senha inválidos");
+      return;
+    }
+
+    localStorage.setItem(
+      "token",
+      "flowbank-token"
+    );
+
+    navigate("/dashboard");
   }
 
   return (

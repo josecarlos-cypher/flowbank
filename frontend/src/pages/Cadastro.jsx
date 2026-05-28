@@ -10,28 +10,26 @@ function Cadastro() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  async function cadastrar() {
+  function cadastrar() {
     if (!nome || !email || !senha) {
       alert("Preencha todos os campos");
       return;
     }
 
-    try {
-      await api.post("/auth/cadastro", {
-        nome,
-        email,
-        senha,
-      });
+    const usuario = {
+      nome,
+      email,
+      senha,
+    };
 
-      alert("Conta criada com sucesso");
+    localStorage.setItem(
+      "usuario",
+      JSON.stringify(usuario)
+    );
 
-      navigate("/login");
-    } catch (err) {
-      alert(
-        err.response?.data?.msg ||
-          "Erro ao cadastrar"
-      );
-    }
+    alert("Conta criada com sucesso");
+
+    navigate("/dashboard");
   }
 
   return (

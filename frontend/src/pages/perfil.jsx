@@ -1,6 +1,9 @@
 import Menu from "../components/Menu";
+import { useNavigate } from "react-router-dom";
 
 function Perfil() {
+
+  const navigate = useNavigate();
 
   const usuario = JSON.parse(
     localStorage.getItem("usuario")
