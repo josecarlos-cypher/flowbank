@@ -18,7 +18,7 @@ function Onboarding() {
 
   return (
 
-    <div className="min-h-[100dvh] bg-[#020617] text-white relative overflow-x-hidden">
+    <div className="min-h-[100dvh] bg-[#020617] text-white relative">
 
       {/* EFEITOS */}
 
