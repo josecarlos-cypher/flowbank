@@ -6,30 +6,28 @@ function Onboarding() {
   const navigate = useNavigate();
 
   const handleScroll = () => {
-
     const section =
       document.getElementById("recursos");
 
     if (section) {
-
-      window.scrollTo({
-        top: section.offsetTop,
+      section.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
-
     }
-
   };
 
   return (
 
     <div
       className="
-        bg-[#020617]
-        text-white
-        relative
-        overflow-x-hidden
-      "
+  min-h-[100dvh]
+  bg-[#020617]
+  text-white
+  relative
+  overflow-x-hidden
+  overflow-y-auto
+"
     >
 
       {/* EFEITOS */}

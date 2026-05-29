@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo.png'],
+      includeAssets: ['icon-192.png', 'icon-512.png'],
       manifest: {
         name: 'FlowBank',
         short_name: 'FlowBank',
@@ -21,14 +21,16 @@ export default defineConfig({
         scope: '/',
         icons: [
           {
-            src: '/logo.png',
+            src: '/icon-192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any maskable'
           },
           {
-            src: '/logo.png',
+            src: '/icon-512.png',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any maskable'
           }
         ]
       },
