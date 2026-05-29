@@ -18,16 +18,7 @@ function Onboarding() {
 
   return (
 
-    <div
-      className="
-    min-h-[100dvh]
-    bg-[#020617]
-    text-white
-    relative
-    overflow-x-hidden
-    overflow-y-auto
-  "
-    >
+    <div className="min-h-[100dvh] bg-[#020617] text-white relative overflow-x-hidden">
 
       {/* EFEITOS */}
 
@@ -61,17 +52,7 @@ function Onboarding() {
 
       {/* HERO */}
 
-      <section
-        className="
-          min-h-screen
-          flex
-          items-center
-          justify-center
-          px-6
-          relative
-          z-10
-        "
-      >
+      <section className="min-h-[100dvh] flex items-center justify-center px-6 py-16 relative z-10">
 
         <div
           className="
