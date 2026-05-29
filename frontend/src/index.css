@@ -4,20 +4,20 @@ html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
   background: #020617;
 }
 
 body {
+  overflow-y: auto;
   font-family: "Poppins", sans-serif;
   touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 #root {
   width: 100%;
-  height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  min-height: 100dvh;
+  overflow: visible;
 }
