@@ -6,8 +6,7 @@ function Onboarding() {
   const navigate = useNavigate();
 
   const handleScroll = () => {
-    const section =
-      document.getElementById("recursos");
+    const section = document.getElementById("recursos");
 
     if (section) {
       section.scrollIntoView({
@@ -21,13 +20,13 @@ function Onboarding() {
 
     <div
       className="
-  min-h-[100dvh]
-  bg-[#020617]
-  text-white
-  relative
-  overflow-x-hidden
-  overflow-y-auto
-"
+    min-h-[100dvh]
+    bg-[#020617]
+    text-white
+    relative
+    overflow-x-hidden
+    overflow-y-auto
+  "
     >
 
       {/* EFEITOS */}

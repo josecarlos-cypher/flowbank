@@ -10,6 +10,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon-192.png', 'icon-512.png'],
+
       manifest: {
         name: 'FlowBank',
         short_name: 'FlowBank',
@@ -34,6 +35,7 @@ export default defineConfig({
           }
         ]
       },
+
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,svg,ico}']
       }
