@@ -1,23 +1,26 @@
 @import "tailwindcss";
 
-html,
-body {
+html {
   margin: 0;
   width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
   background: #020617;
 }
 
 body {
-  overflow-y: auto;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
+  background: #020617;
 }
 
 #root {
   width: 100%;
-  min-height: 100dvh;
-  overflow: visible;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
