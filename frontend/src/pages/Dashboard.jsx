@@ -313,7 +313,7 @@ function Dashboard() {
       );
 
   return (
-    <div className="min-h-[100dvh] overflow-y-auto bg-[#020617] text-white flex flex-col lg:flex-row">
+    <div className="min-h-[100dvh] bg-[#020617] text-white flex flex-col lg:flex-row">
 
       {/* SIDEBAR */}
 
@@ -675,7 +675,7 @@ function Dashboard() {
                           }
                         >
                           {!item.verso ? (
-                            <div className="relative overflow-y-auto rounded-[32px] border border-cyan-400/40 bg-gradient-to-br from-[#001b74] via-[#02145e] to-[#020617] p-8 h-[260px] shadow-[0_0_40px_rgba(0,255,255,0.15)]">
+                            <div className="relative rounded-[32px] border border-cyan-400/40 bg-gradient-to-br from-[#001b74] via-[#02145e] to-[#020617] p-8 h-[260px] shadow-[0_0_40px_rgba(0,255,255,0.15)]">
                               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,255,255,0.20),transparent_45%)]" />
 
                               <div className="relative z-10 h-full flex flex-col justify-between">
@@ -760,7 +760,7 @@ function Dashboard() {
                               </div>
                             </div>
                           ) : (
-                            <div className="rounded-[32px] border border-cyan-400/40 bg-gradient-to-br from-[#001b74] via-[#02145e] to-[#020617] h-[260px] overflow-y-auto">
+                            <div className="rounded-[32px] border border-cyan-400/40 bg-gradient-to-br from-[#001b74] via-[#02145e] to-[#020617] h-[260px]">
                               <div className="h-14 bg-black mt-8" />
 
                               <div className="px-8 mt-8">
